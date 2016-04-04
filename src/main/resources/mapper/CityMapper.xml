@@ -6,4 +6,12 @@
   <select id="selectCityById" resultType="City">
     select * from City where id = #{id}
   </select>
+   <insert id="insertOne" parameterType="com.example.domain.City" useGeneratedKeys="true"
+            keyProperty="id">
+    insert into city (id,  name, 
+      state ,country
+      )
+       values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR}
+      )
+  </insert>
 </mapper>

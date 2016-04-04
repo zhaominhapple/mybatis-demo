@@ -17,5 +17,8 @@ public class CityMapper {
   public City selectCityById(long id) {
     return this.sqlSessionTemplate.selectOne("selectCityById", id);
   }
-
+  
+  public int insert(City city) {
+	    return this.sqlSessionTemplate.insert("insertOne",  city);
+	  }
 }
